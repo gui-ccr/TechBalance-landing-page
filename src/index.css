@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #06122A;
+  --color-navy-900: #0A1A3A;
+  --color-navy-800: #0F2148;
+  --color-navy-700: #142a5a;
+  --color-navy-card: #122244;
+  --color-navy-card-hover: #173058;
+  --color-navy-line: #1f3566;
+  --color-gold: #F5C518;
+  --color-gold-soft: #FFD84A;
+  --color-gold-deep: #E0AE07;
+  --color-text-muted: #98A6C2;
+  --color-text-dim: #6C7DA0;
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-body);
+  background: var(--color-navy-900);
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+/* JS-toggled scroll reveal */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* Pulsing dot — keyframe not expressible in JSX */
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245,197,24,0.5); }
+  50%       { box-shadow: 0 0 0 8px rgba(245,197,24,0); }
+}
+.pulse-dot { animation: pulse-dot 2.4s ease-in-out infinite; }
+
+/* Gradient-mask border on SolutionFlow card — CSS mask not expressible in Tailwind */
+.solution-card { position: relative; }
+.solution-card::before {
+  content: ""; position: absolute; inset: -1px; border-radius: 22px; padding: 1px;
+  background: linear-gradient(180deg, rgba(245,197,24,0.3), transparent);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
+}
+
+/* JS-driven progress bar — width set at runtime via IntersectionObserver */
+.fill-bar {
+  height: 100%; border-radius: 9999px;
+  background: linear-gradient(90deg, var(--color-gold-deep), var(--color-gold-soft));
+  width: 0%; transition: width 1.6s cubic-bezier(.2,.7,.2,1);
+}
+
+/* Team member radial glow — pseudo-element on hover */
+.team-member-glow { position: relative; overflow: hidden; }
+.team-member-glow::before {
+  content: ""; position: absolute; right: -30px; top: -30px;
+  width: 80px; height: 80px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,197,24,0.12), transparent 70%);
+  opacity: 0; transition: opacity .3s;
+}
+.team-member-glow:hover::before { opacity: 1; }
