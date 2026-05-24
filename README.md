@@ -189,14 +189,14 @@ public/
       <b>Milena Ferreira da Silva</b><br/>
       <sub>🛡️ QA & Documentação</sub><br/><br/>
       <sub>Executa testes, redige manuais de uso, organiza a documentação técnica e estrutura a apresentação final para a banca.</sub><br/><br/>
-      <!-- <a href="https://github.com/username">🔗 GitHub</a> -->
+      <a href="https://github.com/milenaferreira">🔗 GitHub</a>
     </td>
     <td align="center" width="200">
       <img src="https://github.com/identicons/igormendes.png" width="80" style="border-radius:50%" alt="Igor Mendes"/><br/><br/>
       <b>Igor Silva Mendes</b><br/>
       <sub>🛡️ QA & Documentação</sub><br/><br/>
       <sub>Executa testes, redige manuais de uso, organiza a documentação técnica e estrutura a apresentação final para a banca.</sub><br/><br/>
-      <!-- <a href="https://github.com/username">🔗 GitHub</a> -->
+      <a href="https://github.com/igormendes">🔗 GitHub</a>
     </td>
   </tr>
 </table>
