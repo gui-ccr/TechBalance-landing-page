@@ -2,6 +2,8 @@
 
 > Landing page da **TechBalance Solutions**, empresa fictícia criada como parte do seminário da disciplina de **Contabilidade**. O projeto consiste no desenvolvimento de um **ERP contábil** personalizado para micro e pequenas empresas, onde a TechBalance Solutions é a empresa fictícia responsável pelo produto.
 
+🔗 Veja o case completo (ContaUp) no [portfólio de Guilherme Rodrigues](https://www.gui-ccr.com.br/project/contaup).
+
 ---
 
 ## 📚 Contexto acadêmico
